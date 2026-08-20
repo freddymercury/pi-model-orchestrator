@@ -15,28 +15,6 @@
           "reasoning": false
         }
       ]
-    },
-    "openrouter": {
-      "baseUrl": "https://openrouter.ai/api/v1",
-      "api": "openai-completions",
-      "apiKey": "$OPENROUTER_API_KEY",
-      "models": [
-        {
-          "id": "anthropic/claude-haiku-4.5",
-          "name": "Claude Haiku 4.5 via OpenRouter",
-          "reasoning": true
-        },
-        {
-          "id": "deepseek/deepseek-v4-flash-latest",
-          "name": "DeepSeek V4 Flash Latest via OpenRouter",
-          "reasoning": true
-        },
-        {
-          "id": "~anthropic/claude-sonnet-latest",
-          "name": "Claude Sonnet Latest via OpenRouter",
-          "reasoning": true
-        }
-      ]
     }
   }
 }
