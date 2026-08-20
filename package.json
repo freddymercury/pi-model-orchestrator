@@ -1,0 +1,15 @@
+{
+  "name": "pi-model-orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@0xkobold/pi-orchestration": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
