@@ -1,0 +1,21 @@
+{
+  "classifierModel": "openrouter/anthropic/claude-haiku-4.5",
+  "maxSessionBudget": 10,
+  "phaseBias": 0.4,
+  "profiles": {
+    "auto": {
+      "low": {
+        "model": "openrouter/anthropic/claude-haiku-4.5",
+        "thinking": "off"
+      },
+      "medium": {
+        "model": "openrouter/deepseek/deepseek-v4-flash-latest",
+        "thinking": "medium"
+      },
+      "high": {
+        "model": "openrouter/~anthropic/claude-sonnet-latest",
+        "thinking": "high"
+      }
+    }
+  }
+}
