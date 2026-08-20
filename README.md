@@ -48,12 +48,14 @@ Concrete model choices are configuration, not agent identity. A `worker` should 
 ## Files
 
 ```text
-models.json                 # Pi custom provider/model registry example
-model-router.json           # pi-model-router config
+models.json                 # Pi custom Ollama registration only
+model-router.json           # pi-model-router hosted-tier config
 policy.md                   # deterministic local-vs-hosted decision policy
 agents/worker.md            # sub-agent worker policy
 benchmarks/README.md        # local benchmark procedure
 ```
+
+Pi already has OpenRouter as a built-in provider. `models.json` only adds Ollama; the hosted models use Pi's built-in `openrouter/...` provider IDs.
 
 ## Install dependencies
 
@@ -74,13 +76,13 @@ npm install @0xkobold/pi-orchestration
 ollama pull qwen2.5-coder:7b
 ```
 
-2. Export your OpenRouter API key:
+2. Export your OpenRouter API key for Pi's built-in provider:
 
 ```bash
 export OPENROUTER_API_KEY="..."
 ```
 
-3. Merge `models.json` into your Pi model registry configuration.
+3. Merge `models.json` into `~/.pi/agent/models.json` to register Ollama.
 4. Copy `model-router.json` to `~/.pi/agent/model-router.json`.
 5. Use the policy in `policy.md` when spawning sub-agents.
 6. Run the benchmark before raising local concurrency above 1.
